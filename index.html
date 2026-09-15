@@ -357,7 +357,7 @@
           <!-- 嵌入 Unity WebGL 互動繪本 -->
           <div style="width: 100%; display: flex; justify-content: center; margin: 30px 0;">
             <iframe 
-              src="https://wuhoo29.github.io/book1test/" 
+              src="https://wuhoo29.github.io/book1test3/" 
               width="1200" 
               height="600" 
               style="border: none; max-width: 100%; aspect-ratio: 16/9; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px;" 
@@ -397,10 +397,10 @@
           <p class="content-text">手冊可提供教師適合提問的問題以及繪本要傳達的數位素養理念，最後提供相關影片輔助教學。</p>
           
           <!-- Canva 嵌入區塊 -->
-          <div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
+          <div style="position: center; width: 60%; height: 0; padding-top: 60.0000%;
             padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
             border-radius: 8px; will-change: transform;">
-            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+            <iframe loading="lazy" style="position: center; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
               src="https://www.canva.com/design/DAHLWi0TM18/orXWwhbIohEOnG3KrasfmQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
             </iframe>
           </div>
@@ -410,7 +410,7 @@
     </div>
   </section>
 
-<!-- 區塊五：情緒花園 -->
+  <!-- 區塊五：情緒花園 -->
   <section id="s5" class="text-center py-5">
     <div class="container">
       <div class="row">
@@ -432,7 +432,7 @@
         <!-- 內容容器 -->
         <div class="col-12 col-md-11 col-lg-11 mx-auto text-left">
           
-          <!-- 🌸 1. 我的情緒花園互動卡片 -->
+          <!-- 🌸 情緒花園互動遊戲卡片 -->
           <div class="card shadow-sm border-0 rounded-lg p-4 mb-4 bg-white text-center tree-garden-card">
             <h4 class="font-weight-bold text-success mb-2">🌱 我的情緒花園</h4>
             <h5 class="text-muted small mb-3">本週已累積 <span id="waterCount" class="font-weight-bold text-primary font-size-lg">0</span> / 7 滴心情水滴</h5>
@@ -456,7 +456,7 @@
             </div>
           </div>
 
-          <!-- ✏️ 2. 寫下今天的心情表單卡片 -->
+          <!-- ✏️ 心情輸入表單卡片 -->
           <div class="card shadow-sm border-0 rounded-lg p-4 mb-4 bg-white">
             <h4 class="font-weight-bold mb-3 text-primary">✏️ 寫下今天的心情</h4>
             
@@ -515,31 +515,30 @@
               <button type="submit" class="btn btn-primary btn-block rounded-pill py-2 shadow-sm font-weight-bold">
                 儲存今日心情並領取水滴
               </button>
+              
+              <div class="mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4 class="font-weight-bold mb-0">📅 近一週的心情紀錄</h4>
+                  <button id="clearAllBtn" class="btn btn-sm btn-outline-secondary rounded-pill">清空紀錄</button>
+                </div>
+                
+                
+                <div id="moodList" class="row"></div>
+                
+              </div>
             </form>
           </div>
-
-          <!-- 📅 3. 近一週的心情紀錄卡片（獨立拉出，不包在 form 裡） -->
-          <div class="card shadow-sm border-0 rounded-lg p-4 mb-4 bg-white">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h4 class="font-weight-bold mb-0">📅 近一週的心情紀錄</h4>
-              <button id="clearAllBtn" class="btn btn-sm btn-outline-secondary rounded-pill">清空紀錄</button>
-            </div>
-            
-            <div id="moodList" class="row"></div>
-          </div>
-
-          <!-- 🌿 4. 夥伴們的情緒小樹卡片（即時雲端同步） -->
-          <div class="card shadow-sm border-0 rounded-lg p-4 mb-4 bg-white">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h4 class="font-weight-bold mb-0 text-success">🌿 夥伴們的情緒小樹</h4>
-              <small class="text-muted">（資料即時連線中，點擊可幫朋友澆水）</small>
-            </div>
-            
-            <div id="friendsGardenList" class="row">
-              <div class="col-12 text-center text-muted py-3">載入花園中...</div>
-            </div>
-          </div>
-
+<!-- 🌳 朋友的情緒花園清單（即時同步） -->
+<div class="card shadow-sm border-0 rounded-lg p-4 mb-4 bg-white">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="font-weight-bold mb-0 text-success">🌿 夥伴們的情緒小樹</h4>
+    <small class="text-muted">（資料即時連線中，點擊可幫朋友澆水）</small>
+  </div>
+  
+  <div id="friendsGardenList" class="row">
+    <div class="col-12 text-center text-muted py-3">載入花園中...</div>
+  </div>
+</div>
         </div>
       </div>
     </div>
